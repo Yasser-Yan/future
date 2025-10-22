@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShockFast System - Product Introduction</title>
+    <style>
+        :root {
+            --primary-color: #8A2BE2; /* Light purple */
+            --secondary-color: #9370DB; /* Medium purple */
+            --light-purple: #E6E6FA; /* Light lavender */
+            --text-color: #333333;
+            --white: #FFFFFF;
+            --shadow: 0 4px 12px rgba(138, 43, 226, 0.15);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f5ff, #f0e6ff);
+            color: var(--text-color);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 20px rgba(138, 43, 226, 0.25);
+        }
+        
+        .product-image {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            position: relative;
+        }
+        
+        .product-content {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .product-description {
+            margin-bottom: 20px;
+            flex-grow: 1;
+            color: #555;
+        }
+        
+        .youtube-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(138, 43, 226, 0.3);
+        }
+        
+        .youtube-btn:hover {
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(138, 43, 226, 0.4);
+        }
+        
+        .youtube-btn i {
+            margin-right: 8px;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            color: var(--secondary-color);
+            padding: 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Custom catheter icon */
+        .catheter-icon {
+            position: relative;
+            width: 80px;
+            height: 80px;
+        }
+        
+        .catheter-icon::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 20px;
+            background: white;
+            border-radius: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .catheter-icon::after {
+            content: "";
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 10px solid white;
+            border-radius: 50%;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .product-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            header {
+                margin-bottom: 20px;
+            }
+            
+            .product-content {
+                padding: 20px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>ShockFast System</h1>
+            <p class="subtitle">Advanced intravascular lithotripsy technology providing innovative solutions for complex vascular calcified lesions</p>
+        </header>
+        
+        <div class="products-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="catheter-icon"></div>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">ShockFast IVL-Catheter</h2>
+                    <p class="product-description">
+                        The ShockFast IVL-Catheter is a specialized catheter designed for intravascular lithotripsy, featuring optimized energy transmission efficiency and excellent maneuverability to ensure precise treatment in complex vascular anatomy.
+                    </p>
+                    <a href="https://youtu.be/vLBamDW2xNM" class="youtube-btn" target="_blank">
+                        <i class="fab fa-youtube"></i> Watch Product Introduction
+                    </a>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-image">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">ShockFast IVL-Generater</h2>
+                    <p class="product-description">
+                        The ShockFast IVL-Generator is the core generator of the ShockFast System, providing precisely controlled shockwave energy specifically designed to safely and effectively fragment intravascular calcified lesions.
+                    </p>
+                    <a href="https://youtu.be/tpzjs_B6rFs" class="youtube-btn" target="_blank">
+                        <i class="fab fa-youtube"></i> Watch Product Introduction
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>© 2025 ShockFast System. All rights reserved.</p>
+    </footer>
+</body>
+</html>
